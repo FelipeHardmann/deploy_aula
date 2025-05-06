@@ -6,8 +6,7 @@ import os
 DATABASE_URL = os.getenv('db_uri')
 
 engine = create_engine(
-    DATABASE_URL,
-    connect_args={'check_same_thread': False}
+    DATABASE_URL
 )
 
 SessionLocal = sessionmaker(
